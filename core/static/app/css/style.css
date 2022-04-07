@@ -71,3 +71,12 @@ body{
     text-decoration:none;
 }
 
+.img{
+    width: 10;
+    height: 20;
+}
+
+.card-img-top{
+    width: 10;
+    height: 20;
+}

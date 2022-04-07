@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
     {% endblock css %}
     {%load humanize%}
-    {% include "product/carrito.html" %}
+    
     <div class="row">
         <div class="col-md-12">
             <div class="title-header text-center">
@@ -15,28 +15,66 @@
             </div>
         </div>
     </div>
-    <div class="card-deck center">
-        {% for p in entity %}
-            {% if p.img %}
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <img src="{{p.img.url}}" class="card-img-top" alt="{{p.description}}">
-                    <div class="card-header ">
-                        {{p.description}}
-                    </div>
-                    <div class="card-body">
-                        Tamaño : {{p.ancho}}cm x {{p.largo}}cm
-                        <h5 class="card-title ">{{p.type.nomType}} - ${{p.price | intcomma}}</h5>
-                    </div>
-                    <div class="card-body text-center">
-                        <a href="{% url 'addpr' p.id %}" class="btn btn-warning">Agregar al carrito</a>
-                    </div>
-                </div>
-            {% endif%}
-        {% endfor %}
-    </div>
-    
-    
 
+    <br>
+
+    <div class= "container">
+    <div class="card-group">
+    <div class="card">
+        <img src="{% static 'app/img/flauta.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Flauta</h5>
+        <p class="card-text">PRECIO: 20.000</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'app/img/guitarraelectronica.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Guitarra Eléctrica</h5>
+        <p class="card-text">PRECIO: 80.000</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'app/img/bateria2.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Bateria</h5>
+        <p class="card-text">PRECIO: 100.000</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    </div>
+    <br>
+
+    <div class="card-group">
+    <div class="card">
+        <img src="{% static 'app/img/guitarra2.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Guitarra</h5>
+        <p class="card-text">PRECIO: 60.000</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'app/img/violín2.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Violín</h5>
+        <p class="card-text">PRECIO: 50.000</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'app/img/ukele.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Ukelele</h5>
+        <p class="card-text">PRECIO: 30.000</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    </div>
+    <br>
+    </div>
 {% endblock contenido %} 
         
         
